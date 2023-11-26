@@ -11,16 +11,16 @@
     <body>
       <font style="color: purple; font-size: 28px;">
             <script>
-            var D1_Aug = parseInt(prompt("Podaj pierwszy dzień: "));
-            var D2_Aug = parseInt(prompt("Podaj drugi dzień: "));
-            var G1_Aug = parseInt(prompt("Podaj pierwszą godzine: "));
-            var G2_Aug = parseInt(prompt("Podaj drugą godzine: "));
+            var D1_mal = parseInt(prompt("Podaj pierwszy dzień: "));
+            var D2_mal = parseInt(prompt("Podaj drugi dzień: "));
+            var G1_mal = parseInt(prompt("Podaj pierwszą godzine: "));
+            var G2_mal = parseInt(prompt("Podaj drugą godzine: "));
             if (D1_mal < 1 || D1_mal > 31 || D2_mal > D1_mal || D2_mal > 31) {
                   if (G1_mal < 1 || G1_mal > 24 || G2_mal < 1 || G2_mal > 24) {
         alert("Podane dni są niepoprawne.");
               }}else{
-            var roznicaD = Math.abs((D2_Aug - D1_mal) * 86400);
-            var roznicaG = Math.abs((G2_Aug - G1_mal) * 3600);
+            var roznicaD = Math.abs((D2_mal - D1_mal) * 86400);
+            var roznicaG = Math.abs((G2_mal - G1_mal) * 3600);
             suma=roznicaD-roznicaG;
                  }
          document.write("Różnica między tymi dniami i godzinami wynosi: ", suma, " sekund");
