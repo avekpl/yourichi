@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<script language="JavaScript">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    th, td {
+      border: 1px solid #ddd;
+      padding: 6px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #f2f2f2;
+    }
+  </style>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // Funkcja do wypełniania tabeli
+      function fillTable() {
+        // Dane teoretyczne i przykłady kodu
+        const data = [
+          {
+            description: 'Kolor tła',
+            example: 'selektor {background-color: kolor;}',
+            codeExample: 'selektor {background-color: #e0e0e0;}'
+          },
+          {
+            description: 'Tło Obrazkowe',
+            example: 'selektor {background-image: url(adres);}',
+            codeExample: 'selektor {background-image: url("file:///c:/CSS/_rozwiazanie/tla_marginesy/grafiki/tlo_1.jpg");}'
+          },
+          {
+            description: 'Powtarzanie tła',
+            example: 'selektor {background-repeat: repeat;}',
+            codeExample: 'selektor {background-repeat: repeat;}'
+          },
+          {
+            description: 'Pozycja tła',
+            example: 'selektor {background-position: center top;}',
+            codeExample: 'selektor {background-position: center top;}'
+          },
+          {
+            description: 'Zaczepienie tła',
+            example: 'selektor {background-attachment: fixed;}',
+            codeExample: 'selektor {background-attachment: fixed;}'
+          },
+          {
+            description: 'Łączenie atrybutów tła',
+            example: 'selektor {background: #e0e0e0 url("file:///c:/CSS/_rozwiazanie/tla_marginesy/grafiki/tlo_1.jpg") repeat center top fixed;}',
+            codeExample: 'selektor {background: #e0e0e0 url("file:///c:/CSS/_rozwiazanie/tla_marginesy/grafiki/tlo_1.jpg") repeat center top fixed;}'
+          },
+          {
+            description: 'Gradient liniowy',
+            example: 'selektor {background: linear-gradient(to right, #ff7e5f, #feb47b);}',
+            codeExample: 'selektor {background: linear-gradient(to right, #ff7e5f, #feb47b);}'
+          },
+          {
+            description: 'Gradient promienisty',
+            example: 'selektor {background: radial-gradient(circle, #4f52a3, #090979);}',
+            codeExample: 'selektor {background: radial-gradient(circle, #4f52a3, #090979);}'
+          }
+        ];
+
+        // Znajdź tabelę w dokumencie
+        const table = document.getElementById('styleTable');
+
+        // Iteruj przez dane i wypełnij tabelę
+        data.forEach(item => {
+          const row = table.insertRow();
+          const cell1 = row.insertCell(0);
+          const cell2 = row.insertCell(1);
+          const cell3 = row.insertCell(2);
+          cell1.textContent = item.description;
+          cell2.textContent = item.example;
+          cell3.textContent = item.codeExample;
+        });
+      }
+
+      // Wywołaj funkcję wypełniania tabeli po załadowaniu strony
+      fillTable();
+    });
+  </script>
+</head>
+<body>
+
+<table id="styleTable">
+  <tr>
+    <th>Stylowanie Tła</th>
+    <th>Jednozadaniowy opis</th>
+    <th>Przykład</th>
+  </tr>
+</table>
+
+</body>
+</html>
